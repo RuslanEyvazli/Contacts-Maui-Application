@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Shell
+    BackgroundColor="#8873ef"
     x:Class="Contacts.MAUI.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Contacts.MAUI"
+    xmlns:views="clr-namespace:Contacts.MAUI.Views"
     Shell.FlyoutBehavior="Disabled">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Title="Contacts"
+        ContentTemplate="{DataTemplate views:ContactsPage}"
+        Route="ContactsPage" />
 
 </Shell>
