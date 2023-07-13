@@ -3,19 +3,43 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Contacts.MAUI.Views.ContactsPage"
              Title="ContactsPage">
+    <Grid RowDefinitions="50, *, 50"
+          ColumnDefinitions="*"
+          Padding="10"
+          BackgroundColor="Azure">
 
-    <ListView BackgroundColor="Azure"
+        <Frame Padding="15,8,5,8" BackgroundColor="#8873ef" BorderColor="Azure" CornerRadius="40">
+            <SearchBar  Grid.Row="0"
+                   Grid.Column="0"
+                    Placeholder="Search Contact"
+                    TextChanged="SearchBar_TextChanged" 
+                    TextColor="Azure" PlaceholderColor="Azure" ></SearchBar>
+            </Frame>
+        <ListView  Grid.Row="1"
+                   Grid.Column="0"
+                BackgroundColor="Azure"
               SeparatorVisibility="None"
               x:Name="listContacts"
               RowHeight="65"
               ItemSelected="listContacts_ItemSelected" 
               ItemTapped="listContacts_ItemTapped">
-        <ListView.ItemTemplate>
-            <DataTemplate >
-                <TextCell Text="{Binding Path=Name}"
-                           DetailColor="DarkViolet" Detail="{Binding Path=Email}">
-                </TextCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>        
-    </ListView>
+                <ListView.ItemTemplate>
+                    <DataTemplate >
+                        <TextCell Text="{Binding Path=Name}"
+                                   DetailColor="DarkViolet" Detail="{Binding Path=Email}">
+                        <TextCell.ContextActions>
+                            <MenuItem Text="Delete" IsDestructive="True" Clicked="Delete_Clicked" CommandParameter="{Binding .}">
+                                
+                            </MenuItem>
+                        </TextCell.ContextActions>
+                        </TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+        </ListView>
+  
+            <Button  Grid.Row="2" Grid.Column="0"  x:Name="btnAdd" Clicked="btnAdd_Clicked" FontSize="Large" BackgroundColor="#8873ef"  TextColor="White" Text="Add" ></Button>
+
+
+    </Grid>
+    
 </ContentPage>

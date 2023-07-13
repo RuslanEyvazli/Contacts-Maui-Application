@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:controls="clr-namespace:Contacts.MAUI.Views.Controls"
              x:Class="Contacts.MAUI.Views.EditContactPage"
              Title="EditContactPage"
              BackgroundColor="Azure">
@@ -11,34 +13,9 @@
             HorizontalOptions="Center" />
         <Button x:Name="btnCancel" Clicked="btnCancel_Clicked" Text="Cancel"></Button>
     </VerticalStackLayout>-->
+    <controls:ContactControl  x:Name="contactCtrl"
+                              OnSave="btnUpdate_Clicked"
+                              OnCancel="btnCancel_Clicked"
+                              OnError="contactCtrl_OnError"></controls:ContactControl>
 
-    <VerticalStackLayout Spacing="20" Margin="20,50,20,0">
-        <Frame Padding="15,8,5,8" BackgroundColor="Azure">
-            <HorizontalStackLayout>
-                <Label Text="Name" VerticalOptions="Center" WidthRequest="60" FontSize="Header" TextColor="#8873ef"></Label>
-                <Entry x:Name="entryName" VerticalOptions="Center" MinimumWidthRequest="250" TextColor="#8873ef" PlaceholderColor="#8873ef" Placeholder="Write Your Name"></Entry>
-            </HorizontalStackLayout>
-        </Frame>
-        <Frame Padding="15,8,5,8" BackgroundColor="Azure">
-            <HorizontalStackLayout>
-                <Label Text="Email" VerticalOptions="Center" WidthRequest="60" FontSize="Header" TextColor="#8873ef"></Label>
-                <Entry x:Name="entryEmail" VerticalOptions="Center" MinimumWidthRequest="250" TextColor="#8873ef" PlaceholderColor="#8873ef" Placeholder="Write Your Email"></Entry>
-            </HorizontalStackLayout>
-        </Frame>
-        <Frame Padding="15,8,5,8" BackgroundColor="Azure">
-            <HorizontalStackLayout>
-                <Label Text="Phone" VerticalOptions="Center" WidthRequest="60" FontSize="Header" TextColor="#8873ef"></Label>
-                <Entry x:Name="entryPhone" VerticalOptions="Center" MinimumWidthRequest="250" TextColor="#8873ef" PlaceholderColor="#8873ef" Placeholder="Write Your Number"></Entry>
-            </HorizontalStackLayout>
-        </Frame>
-        <Frame Padding="15,8,5,8" BackgroundColor="Azure">
-            <HorizontalStackLayout>
-                <Label Text="Address" VerticalOptions="Center" WidthRequest="60" FontSize="Header" TextColor="#8873ef"></Label>
-                <Entry x:Name="entryAddress" VerticalOptions="Center" MinimumWidthRequest="250" TextColor="#8873ef" PlaceholderColor="#8873ef" Placeholder="Write Your Address"></Entry>
-            </HorizontalStackLayout>
-        </Frame>
-        <Button x:Name="btnUpdate" Clicked="btnUpdate_Clicked" FontSize="Large" BackgroundColor="#8873ef" TextColor="White" Text="Update" Margin="0,30,0,0"></Button>
-        <Button x:Name="btnCancel" Clicked="btnCancel_Clicked" FontSize="Large" BackgroundColor="#8873ef" TextColor="White" Text="Cancel" Margin="0,10,0,0"></Button>
-
-    </VerticalStackLayout>
 </ContentPage>
