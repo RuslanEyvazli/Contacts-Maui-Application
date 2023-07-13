@@ -3,7 +3,7 @@
 <br/>
 -- Contacts.MAUI Application has Search, Edit, Add and Delete Functionalities.
 <img src="https://github.com/RuslanEyvazli/Contacts-Maui-Application/assets/49480215/e9b93154-5324-4759-8334-baf4964d63f0" width="200" height="200"/>
-<img src="https://github.com/RuslanEyvazli/Contacts-Maui-Application/assets/49480215/1fab70f0-71ce-4600-9f14-9bc9e79c371a" width="300" height="300"/>
+<img src="https://github.com/RuslanEyvazli/Contacts-Maui-Application/assets/49480215/1fab70f0-71ce-4600-9f14-9bc9e79c371a" width="400" height="400"/>
 ![Icon](https://github.com/RuslanEyvazli/Contacts-Maui-Application/assets/49480215/e9b93154-5324-4759-8334-baf4964d63f0 | width=100)
 ![Add](https://github.com/RuslanEyvazli/Contacts-Maui-Application/assets/49480215/1fab70f0-71ce-4600-9f14-9bc9e79c371a)
 ![Edit](https://github.com/RuslanEyvazli/Contacts-Maui-Application/assets/49480215/b9e1e1fe-623d-4c7f-b92e-6ec6a4e6a548)
